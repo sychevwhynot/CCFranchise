@@ -1,0 +1,7 @@
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+
+<FilesMatch "\.(css|js|jpg|jpeg|png|gif|webp|svg)$">
+    Require all granted
+</FilesMatch>
