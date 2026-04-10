@@ -184,7 +184,7 @@ button:active {
 
 .brand-bg {
     background: url("./images/pattern.png") no-repeat center;
-    background-size: 130%;
+    background-size: cover;
 }
 
 .collab-card-img {
@@ -263,18 +263,6 @@ button:active {
     position: relative;
 }
 
-.step-number::after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    border: 1px dashed var(--brand-orange);
-    border-radius: 50%;
-    top: -6px;
-    left: -6px;
-    opacity: 0.5;
-}
-
 @media (max-width: 1200px) {
     .timeline {
         padding: 30px 20px;
@@ -318,3 +306,6 @@ button:active {
 .border-none {
     border: none;
 }
+ .politico {
+    color: grey;
+ }
