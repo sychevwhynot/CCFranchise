@@ -637,8 +637,29 @@ button:active {
     transition: all 0.3s;
 }
 
+.form-group select::-ms-expand {
+    display: none; 
+}
+
+.form-group select::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: var(--brand-orange);
     outline: none;
+}
+
+.form-message {
+    display: none;
+}
+
+.form-message.success {
+    color: #28a745;
+}
+
+.form-message.error {
+    color: #dc3545;
 }

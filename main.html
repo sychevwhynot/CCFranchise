@@ -28,6 +28,8 @@
         <link rel="icon" type="image/png" sizes="192x192" href="./static/images/cc_android-chrome-192x192.png">
         <link rel="icon" type="image/png" sizes="512x512" href="./static/images/cc_android-chrome-512x512.png">
         <link rel="canonical" href="https://coffee-cult.ru/franshise/" />
+
+        <script defer src="./ajax/ajax.js"></script>
     </head>
 
     <body>
@@ -434,21 +436,21 @@
                         <div class="col-12 col-xl-6">
                             <div class="form-content">
                                 <h3 class="mb-5 text-center"><strong>Оставить заявку на открытие собственной кофейни</h3></strong>
-                                <form>
+                                <form id="franchise-form">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Ваше полное имя" required>
+                                        <input type="text" name="name" placeholder="Ваше полное имя" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="phone" placeholder="Ваш телефон" required>
+                                        <input type="text" name="phone" placeholder="Ваш телефон" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" placeholder="Ваш Email" required>
+                                        <input type="email" name="email" placeholder="Ваш Email" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" placeholder="Планируемый город открытия" required>
+                                        <input type="text" name="city" placeholder="Планируемый город открытия" required>
                                     </div>
                                     <div class="form-group">
-                                        <select required>
+                                        <select name="format" required>
                                             <option value="" disabled selected>Выберите формат сотрудничества</option>
                                             <option value="Классическая франшиза">Классическая франшиза</option>
                                             <option value="Инвестиционная франшиза">Инвестиционная франшиза</option>
@@ -456,17 +458,17 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <select required>
+                                        <select name="premises" required>
                                             <option value="" disabled selected>Есть ли подходящее помещение для открытия кофейни</option>
                                             <option value="yes">Да</option>
                                             <option value="no">Нет</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" placeholder="Какую сумму инвестиций вы готовы рассмотреть" required>
+                                        <input name="invest_sum" type="text" placeholder="Какую сумму инвестиций вы готовы рассмотреть" required>
                                     </div>
                                     <div class="form-group mb-5">
-                                        <select required>
+                                        <select name="experience" required>
                                             <option value="" disabled selected>Наличие опыта работы в сфере общепит</option>
                                             <option value="yes">Да</option>
                                             <option value="no">Нет</option>
@@ -474,6 +476,9 @@
                                     </div>
                                     <button type="submit" class="button-primary w-100 mb-3 small">Отправить</button>
                                     <p class="small text-center">Нажимая на кнопку, вы соглашаетесь с <a href="https://coffee-cult.ru/security/" class="politico">политикой&nbsp;конфиденциальности</a></p>
+
+                                    <div id="form-message" class="form-message">
+                                    </div>
                                 </form>
                             </div>
                         </div>
