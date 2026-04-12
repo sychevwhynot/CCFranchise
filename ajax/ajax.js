@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const formData = new FormData(form);
 
-        fetch('./form_send.php', {
+        fetch('./ajax/form_send.php', {
             method: 'POST',
             body: formData
         })
