@@ -26,6 +26,10 @@
     color: white;
 }
 
+.orange {
+    color: var(--brand-orange);
+}
+
 h1, h2, h4, h5, h6 {
     margin: 0;
     font-family: 'CCFont', sans-serif; 
@@ -46,6 +50,20 @@ h3 {
 
 .small {
     font-size: 20px;
+}
+
+.small-time {
+    font-size: 36px;
+}
+
+@media (max-width: 768px) {
+    .small-time {
+        font-size: 20px;
+    }
+}
+
+.small-partners {
+    font-size: 24px;
 }
 
 @media (max-width: 768px) {
@@ -303,7 +321,7 @@ button:active {
         left: calc(50% + 24px);
         top: 24px;
         width: calc(100% - 48px);
-        height: 4px;
+        height: 2px;
         background: var(--brand-gray);
         z-index: 1;
     }
@@ -341,7 +359,7 @@ button:active {
         position: absolute;
         left: 34px;
         top: 48px;
-        width: 4px;
+        width: 2px;
         height: calc(100%);
         background: var(--brand-gray);
         z-index: 1;
@@ -387,6 +405,7 @@ button:active {
 .border-none {
     border: none;
 }
+
  .politico {
     color: var(--brand-gray);
  }
@@ -464,22 +483,35 @@ button:active {
 
 .mark-text-top-hero {
     position: absolute;
-    top: 0;
+    top: -50px;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
-    font-size: 24px;
+    font-size: 36px;
     text-align: center;
 }
 
 .mark-text-bottom-hero {
     position: absolute;
-    bottom: 0;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
-    font-size: 24px;
+    font-size: 36px;
     text-align: center;
+}
+
+.timeline-line-hero::after {
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 12px solid var(--brand-gray);
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
 }
 
 @media (max-width: 768px) {
@@ -510,9 +542,23 @@ button:active {
         margin: 0;
     }
 
+    .timeline-line-hero::after {
+        content: '';
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        right: auto;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 12px solid var(--brand-gray);
+        border-bottom: none;
+    }
+
     .timeline-line-hero::before,
     .timeline-line-hero::after {
-        display: none;
+        display: block;
     }
 
     .timeline-marks-hero {
