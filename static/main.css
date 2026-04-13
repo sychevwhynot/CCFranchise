@@ -13,6 +13,18 @@
     text-transform: uppercase;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
 :root {
     --brand-orange: #FCB316;
     --brand-gray: #252929;
