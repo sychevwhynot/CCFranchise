@@ -721,3 +721,24 @@ button:active {
 .form-message.error {
     color: #dc3545;
 }
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+.hero-arrow {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    color: white;
+    font-size: 32px;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+}
