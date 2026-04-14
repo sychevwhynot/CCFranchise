@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'CCHeading'; 
-    src: url('./fonts/DINCondensed-Light.ttf') format('truetype');
+    src: url('/franshise/static/fonts/DINCondensed-Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'CCFont'; 
-    src: url('./fonts/SM_FONT_3-Regular.ttf') format('truetype');
+    src: url('/franshise/static/fonts/SM_FONT_3-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     text-transform: uppercase;
@@ -122,7 +122,7 @@ body {
 
 .hero {
     position: relative; 
-    background: url("./images/preview_hero.jpg") no-repeat;
+    background: url("/franshise/static/images/preview_hero.jpg") no-repeat;
     background-size: cover; 
     background-position: center 37%;
     height: 100vh;
@@ -214,13 +214,13 @@ button:active {
 }
 
 .brand-bg {
-    background: url("./images/pattern.png") no-repeat center;
+    background: url("/franshise/static/images/pattern.png") no-repeat center;
     background-size: cover;
 }
 
 @media (max-width: 768px) {
     .brand-bg {
-        background: url("./images/pattern-mobile.png") no-repeat center;
+        background: url("/franshise/static/images/pattern-mobile.png") no-repeat center;
         background-size: 100% auto;
     }
 }
